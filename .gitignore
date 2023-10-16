@@ -1,0 +1,15 @@
+mapx_temp_storage
+*.log
+*.temp
+*.pyc
+*.DS_Store
+*.json
+*.sav
+*.pkl
+*.pdf
+*.docx
+*.doc
+*.xlsx
+*.xlsm
+*.xml
+*.sqlite3

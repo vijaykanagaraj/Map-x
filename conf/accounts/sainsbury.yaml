@@ -1,8 +1,0 @@
-defaults:
-  - config
-  - _self_
-
-Extraction_settings:
-  area_filter: &def_area [100000,25000000]
-
-
