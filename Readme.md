@@ -1,16 +1,4 @@
 MapX
 
-Tool for easy data extraction from Generated PDF
-
-
-
-
-
-
-
-
-
-
-
-Powered by PIT AI Team
+light weight package for easy data extraction from Generated PDF
 
