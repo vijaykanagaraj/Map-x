@@ -1,0 +1,7 @@
+defaults:
+  - accounts: config
+  - _self_
+
+hydra:
+  searchpath:
+    - pkg://conf/accounts

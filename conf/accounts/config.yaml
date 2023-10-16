@@ -1,0 +1,108 @@
+Version: v1
+Path:
+#  location_to_save: /Users/vijaykanagaraj/PycharmProjects/mapx_image/
+  location_to_save: "./mapx_temp_storage/"
+Extraction_settings:
+  horizontal_buffer: 50
+  vertical_buffer: 12
+  area_filter: &def_area [100,25000000]
+  mode: "AUTO"
+  kind: "ALL"
+  default_strategy: &def_strategy "pdfplumber"
+  custom:
+    All:
+      strategy: ${accounts.Extraction_settings.default_strategy}
+      area_filter: ${accounts.Extraction_settings.area_filter}
+    Paragraph:
+      strategy: ${accounts.Extraction_settings.default_strategy}
+      area_filter: ${accounts.Extraction_settings.area_filter}
+    Table:
+      strategy: ${accounts.Extraction_settings.default_strategy}
+      area_filter: ${accounts.Extraction_settings.area_filter}
+    Nested_table:
+      strategy: ${accounts.Extraction_settings.default_strategy}
+      area_filter: ${accounts.Extraction_settings.area_filter}
+  check_for_nested_tables: False
+  check_for_table_in_paragraph: False
+  check_for_paragraph_in_table: False
+
+Camelot:
+  Settings:
+    active: "Stream"
+    Stream:
+      flavor: "stream"
+      row_tol: 10
+      edge_tol: 500
+      columns: None
+    Lattice:
+      flavor: "lattice"
+      line_scale: 40
+      process_background: False
+
+  Annotation_buffer:
+    top: 4
+    bottom: 0
+
+  Table_filter:
+    min_columns: 2
+    min_rows: 1
+
+Pdfplumber:
+  Settings:
+    vertical_strategy: "lines"
+    horizontal_strategy: "lines"
+    snap_tolerance: 4
+
+  Annotation_buffer:
+    top: 5
+    bottom: 5
+
+  Table_filter:
+    min_columns: 1
+    min_rows: 1
+
+Display_settings:
+#  annotation_colour: [255,140,0] #orange
+  annotation_colour: [0,255,0] #green
+  annotation_thickness: 2
+  text_colour: [0,255,0] #green
+  text_thickness: 0.9
+  mask_colour: [255,255,255] # white
+
+Image_preprocessing:
+  Table_preprocessing:
+    Line_detection_kernel:
+      Horizontal:
+        kernel: [30,1]
+        iterations: 2
+      Vertical:
+        kernel: [1,30]
+        iterations: 2
+    Dilate:
+      kernel: [1,5]
+      iterations: 5
+    Erode:
+      kernel: [1,5]
+      iterations: 5
+
+  Paragraph_preprocessing:
+    # vertical and horizontal kernels will be captured realtime
+    Gaussian:
+      kernel: [5,5]
+      iterations: 0
+    Buffer:
+      horizontal: 50   # user input
+      vertical: 12     # user input
+
+
+
+
+
+
+
+
+
+
+
+
+

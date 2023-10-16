@@ -1,0 +1,17 @@
+fastapi==0.70.0
+opencv-python==4.5.3.56
+pdfminer.six==20221105
+pdfplumber==0.9.0
+camelot-py==0.10.1
+imutils==0.5.4
+streamlit==1.11.1
+streamlit-lottie==0.0.3
+PyMuPDF==1.18.16
+matplotlib==3.4.3
+pdf2image==1.14.0
+pdftopng==0.2.3
+tabulate==0.8.9
+termcolor==1.1.0
+hydra-core==1.2.0
+pathlib==1.0.1
+pypdf2==1.26.0
